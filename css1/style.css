@@ -1,0 +1,269 @@
+/*共通部分
+--------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+    font-weight: lighter;
+}
+body{
+    font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "Yu Gothic Medium","游ゴシック Medium", YuGothic ,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+    line-height: 1.7;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    opacity: .5;
+    transition: .3s;
+}
+li{
+    list-style-type: none;
+}
+/*--------MOBILE version---------*/
+/*HEADER*/
+header{
+    background-image: url("../images/main.png");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    text-align: center;
+    position: relative;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+.header-nav{
+    visibility: hidden;
+    display: none;
+}
+.hamberger{
+    visibility: visible;
+}
+.header_logo{
+    height: 40px;
+}
+header p{
+    font-size: 24px;
+    position: absolute;
+    transform: translate(-50%);
+    top: 50%;
+    left: 50%;
+}
+/*NEWS*/
+.title{
+    font-size: 24px;
+    text-align: center;
+}
+section{
+    padding: 50px 30px;
+}
+.news > p{
+    text-align: center;
+}
+.news ul li a{
+    color: #000;
+    font-size: 18px;
+    display: block;
+}
+.news-list_block{
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+}
+.news-list_border{
+    font-size: 13px;
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 5px 8px;
+    margin: 0 30px;
+    font-size: 11px;
+}
+.news-list li{
+    padding: 30px 0;
+    border-bottom: 1px solid #000;
+}
+/*EXAMPLE*/
+.examples{
+    padding: 50px 30px;
+}
+.examples > p{
+    text-align: center;
+    margin-bottom: 0px;
+}
+.example_img{
+    max-width: 700px;
+    width: 100%;
+}
+.example_title{
+    text-align: center;
+    font-size: 24px;
+}
+.example_text{
+    text-align: center;
+    font-size: 14px;
+}
+.example{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.more{
+    width: 300px;
+}
+.link-title{
+    text-align: center;
+}
+.link-title a{
+    border: 1px solid #000;
+    font-size: 20px;
+    padding: 12px 40px;
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+.links{
+    flex-direction: column;
+    display: flex;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+.links a{
+    width: 100%;
+    display: block;
+}
+.links img{
+    width: 100%;
+    vertical-align: bottom;
+}
+/*FOOTER*/
+.footer{
+    background-color: #000;
+}
+.footer a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.footer ul{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer ul li{
+    text-align: center;
+    padding-top: 30px;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.footer-nav p{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer-logo{
+    height: 40px;
+}
+.footer-content{
+    color: #fff;
+}
+.copyright{
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+/*PC version*/
+@media screen and (min-width: 960px){
+    /*HEADER*/
+    header{
+        height: 80vh;
+    }
+    header p{
+        font-size: 48px;
+        font-weight: normal;
+    }
+    .header_logo{
+        height: 60px;
+        margin-left: 100px;
+    }
+    .hamberger{
+        display: none;
+    }
+    .header{
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+    .header-nav{
+        visibility: visible;
+        display: contents;
+    }
+    .header-nav a{
+        color: #000;
+        display: block;
+        font-size: 18px;
+    }
+    .header-nav ul{
+        display: flex;
+        margin-right: 100px;
+    }
+    .header-nav ul li{
+        margin-left: 50px;
+    }
+    /*MAIN*/
+    .news{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .title{
+        font-size: 38px;
+        text-align: center;
+    }
+    .news-list_block{
+        display: inline-block;
+        font-size: 18px;
+    }
+    .news-list li{
+        padding: 15px 0;
+    }
+    .news-list{
+        padding: 60px 0;
+    }
+    .examples{
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .example{
+        width: 40%;
+    }
+    .links{
+        flex-direction: row;
+    }
+    /*FOOTER*/
+    .footer-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer-nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-nav li{
+        margin-left: 50px;
+    }
+    .copyright{
+        margin-top: 30px;
+    }
+}
